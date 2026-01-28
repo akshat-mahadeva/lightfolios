@@ -2,6 +2,9 @@
 
 <img width="1680" height="928" alt="Screenshot 2026-01-28 at 4 01 46 PM" src="https://github.com/user-attachments/assets/50eb79b5-eaa6-447d-88fa-780c654f4527" />
 
+<img width="1680" height="928" alt="Screenshot 2026-01-28 at 4 29 32 PM" src="https://github.com/user-attachments/assets/db4e9645-4a1f-4a6b-8455-9555a11783bd" />
+
+
 Lightfolios is a compact portfolio starter built with Next.js (app router) and motion-enabled components. It’s designed so you can personalize content from a single data file and swap templates in `components/versions/`.
 
 Why use this starter?
