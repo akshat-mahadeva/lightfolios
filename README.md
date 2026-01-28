@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lightfolios — A simple, data-driven Next.js portfolio
 
-## Getting Started
+Lightfolios is a compact portfolio starter built with Next.js (app router) and motion-enabled components. It’s designed so you can personalize content from a single data file and swap templates in `components/versions/`.
 
-First, run the development server:
+Why use this starter?
+
+- Edit site content from one place: `lib/data.ts`.
+- Motion-ready UI: components are prepared for Framer Motion transitions.
+- Easy to add templates: each template lives under `components/versions/<name>`.
+
+Quick start
+
+Requirements: Node 18+ and a package manager (`npm`, `pnpm`, or `yarn`).
+
+Install and run locally:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Build for production:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm run start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Personalize the site
 
-## Learn More
+- Open `lib/data.ts` and update the exported values (hero text, projects, experience, social links, etc.). Components read from this file — no need to edit individual pages to change copy or add items.
+- If you prefer an example to start from, use `lib/data.example.ts` (included) — copy it to `lib/data.ts` and edit.
 
-To learn more about Next.js, take a look at the following resources:
+Templates and structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Templates live in `components/versions/`. The current example is `components/versions/one`.
+- To add a new template: copy an existing version folder, update its main export (e.g., `PortfolioOne.tsx`), and point `app/page.tsx` or `app/layout.tsx` to your new component to preview it.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Animations
 
-## Deploy on Vercel
+- Components use Framer Motion (`motion.div`) for transitions. Tweak animation variants and timing inside component files.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contact handling
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Server-side contact logic is in `actions/sendContactEmail.ts`. This starter includes an example Resend setup — there is a `.example.env` showing the variables used for the contact form. Set the following environment variables (copy `.example.env` to `.env.local` and fill values, or configure them in your host):
+  - `RESEND_API_KEY` — your Resend API key
+  - `CONTACT_FROM_EMAIL` — the from identity used in outgoing messages
+  - `CONTACT_TO_EMAIL` — the email that will receive contact submissions
+
+- To use a different provider, edit `actions/sendContactEmail.ts` to replace the Resend-specific logic.
+
+Deploy
+
+- Recommended: Vercel — connect the repository and deploy; Next.js is supported out of the box.
+
+Contributing
+
+- Add new templates under `components/versions/` and open a PR. Keep templates self-contained and prefer reading copy from `lib/data.ts`.
+
+License
+
+- MIT — free to use and adapt.
+
+## 🌟 Showcase
+
+Built something with Lightfolios? Open a PR and add your link here!
+
+- [Akshat Mahadeva](https://akshatmahadeva.com)
+- Akshat Mahadeva
