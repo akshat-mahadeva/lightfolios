@@ -1,4 +1,6 @@
-# Lightfolios — A simple, data-driven Next.js portfolio
+# Lightfolios — A simple, data-driven Next.
+
+<img width="1680" height="928" alt="Screenshot 2026-01-28 at 4 01 46 PM" src="https://github.com/user-attachments/assets/50eb79b5-eaa6-447d-88fa-780c654f4527" />
 
 Lightfolios is a compact portfolio starter built with Next.js (app router) and motion-enabled components. It’s designed so you can personalize content from a single data file and swap templates in `components/versions/`.
 
@@ -66,4 +68,4 @@ License
 Built something with Lightfolios? Open a PR and add your link here!
 
 - [Akshat Mahadeva](https://akshatmahadeva.com)
-- Akshat Mahadeva
+- (your name)
